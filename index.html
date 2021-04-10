@@ -1,10 +1,46 @@
 <html>
-  <head>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    
-  </body>
-  <script type="text/javascript" src="main.js"></script>
+
+<head>
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="nav-bar" id="nav-bar">
+    <header class="header" id="header">
+      <h1> What's for Dinner?</h1>
+    </header>
+    <button type="button" id="add-recipe" class="add-recipe" name="add-recipe">ADD A RECIPE</button>
+  </nav>
+  <main class="main-page" id="main-page">
+    <form class="meal-form" id="meal-form">
+      <h2 class="what-meal" id="what-meal">What are you looking for?<span class="asterisk">*</span></h2>
+      <div class="side-radio">
+        <input type="radio" class="radio" id="side" name="side" value="side">
+        <label for="side" class="label">Side</label>
+      </div>
+      <div class="main-radio">
+        <input type="radio" class="radio" id="main-dish" name="main-dish" value="main">
+        <label for="main-dish" class="label">Main Dish</label>
+      </div>
+      <div class="dessert-radio">
+        <input type="radio" class="radio" id="dessert" name="dessert" value="dessert">
+        <label for="dessert">Dessert</label>
+      </div>
+      <div class="entire-meal-radio">
+        <input type="radio" class="radio" id="entire-meal" name="entire-meal" value="entire-meal">
+        <label for="entire-meal">Entire Meal</label>
+      </div>
+      <button type="button" class="lets-cook" id="lets-cook" name="lets-cook">LET'S COOK!</button>
+    </form>
+    <section class="right-square" id="right-square">
+      <div>
+        <p class="recipe hidden" id="recipe">placeholder</p>
+      </div>
+    </section>
+  </main>
+</body>
+<script type="text/javascript" src="data.js"></script>
+<script type="text/javascript" src="main.js"></script>
+
 </html>
