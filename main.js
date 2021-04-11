@@ -11,6 +11,7 @@ var selectedSection = document.querySelector('.selected-meal');
 var selectedString = document.getElementById("selected-meal-choice");
 
 letsCookBtn.addEventListener("click", showMeal);
+clearBtn.addEventListener("click", defaultView);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -36,4 +37,18 @@ function showMeal() {
     selectedString.innerText =`${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`
     togglePotImg()
   }
+  resetRadioButtons([sideRadio, mainRadio, dessertRadio, entireMealRadio]);
+}
+
+function resetRadioButtons(buttons) {
+  for (i = 0; i < buttons.length; i++) {
+    buttons[i].checked = false;
+  }
+}
+
+function defaultView() {
+  resetRadioButtons([sideRadio, mainRadio, dessertRadio, entireMealRadio]);
+  selectedSection.hidden = true;
+  potImg.hidden = false;
+  clearBtn.hidden = true;
 }
