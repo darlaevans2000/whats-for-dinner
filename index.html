@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -7,37 +8,44 @@
 
 <body>
   <nav class="nav-bar" id="nav-bar">
-    <header class="header" id="header">
-      <h1> What's for Dinner?</h1>
-    </header>
-    <button type="button" id="add-recipe" class="add-recipe" name="add-recipe">ADD A RECIPE</button>
+    <h1> What's for Dinner?</h1>
+    <button type="button" id="add-recipe" class="add-recipe">ADD A RECIPE</button>
   </nav>
-  <main class="main-page" id="main-page">
-    <form class="meal-form" id="meal-form">
-      <h2 class="what-meal" id="what-meal">What are you looking for?<span class="asterisk">*</span></h2>
-      <div class="side-radio">
-        <input type="radio" class="radio" id="side" name="side" value="side">
-        <label for="side" class="label">Side</label>
+  <div class="box">
+    <section class="left-sec">
+      <main class="main-page" id="main-page">
+        <form class="meal-form" id="meal-form">
+          <h2 class="what-meal" id="what-meal">What are you looking for?<span class="asterisk">*</span></h2>
+          <div class="side-radio">
+            <input type="radio" class="radio" id="side" name="side" value="side">
+            <label for="side" class="label">Side</label>
+          </div>
+          <div class="main-radio">
+            <input type="radio" class="radio" id="main-dish" name="main-dish" value="main">
+            <label for="main-dish" class="label">Main Dish</label>
+          </div>
+          <div class="dessert-radio">
+            <input type="radio" class="radio" id="dessert" name="dessert" value="dessert">
+            <label for="dessert">Dessert</label>
+          </div>
+          <div class="entire-meal-radio">
+            <input type="radio" class="radio" id="entire-meal" name="entire-meal" value="entire-meal">
+            <label for="entire-meal">Entire Meal</label>
+          </div>
+          <button type="button" class="lets-cook" id="lets-cook" name="lets-cook">LET'S COOK!</button>
+        </form>
+    </section>
+    <section class="right-sec">
+      <img id="pot" src="assets/cookpot.svg" alt="cookpot">
+      <div class="selected-meal hidden">
+        <h3>You should make:</h3>
+        <h4 class="selected-meal-choice" </h4>
       </div>
-      <div class="main-radio">
-        <input type="radio" class="radio" id="main-dish" name="main-dish" value="main">
-        <label for="main-dish" class="label">Main Dish</label>
-      </div>
-      <div class="dessert-radio">
-        <input type="radio" class="radio" id="dessert" name="dessert" value="dessert">
-        <label for="dessert">Dessert</label>
-      </div>
-      <div class="entire-meal-radio">
-        <input type="radio" class="radio" id="entire-meal" name="entire-meal" value="entire-meal">
-        <label for="entire-meal">Entire Meal</label>
-      </div>
-      <button type="button" class="lets-cook" id="lets-cook" name="lets-cook">LET'S COOK!</button>
-    </form>
-    <section class="right-square" id="right-square">
       <div>
-        <p class="recipe hidden" id="recipe">placeholder</p>
+        <button class="clear hidden" type="button">CLEAR</button>
       </div>
     </section>
+  </div>
   </main>
 </body>
 <script type="text/javascript" src="data.js"></script>
