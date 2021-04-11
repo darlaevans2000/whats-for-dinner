@@ -39,17 +39,17 @@ function showMeal() {
   } else {
     alert("Please make a selection!")
   }
-  resetRadioButtons([sideRadio, mainRadio, dessertRadio, entireMealRadio]);
+  resetBtns([sideRadio, mainRadio, dessertRadio, entireMealRadio]);
 }
 
-function resetRadioButtons(buttons) {
+function resetBtns(buttons) {
   for (i = 0; i < buttons.length; i++) {
     buttons[i].checked = false;
   }
 }
 
 function defaultView() {
-  resetRadioButtons([sideRadio, mainRadio, dessertRadio, entireMealRadio]);
+  resetBtns([sideRadio, mainRadio, dessertRadio, entireMealRadio]);
   selectedSection.hidden = true;
   potImg.hidden = false;
   clearBtn.hidden = true;
