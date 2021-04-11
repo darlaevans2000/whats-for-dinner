@@ -36,6 +36,8 @@ function showMeal() {
   } else if (entireMealRadio.checked) {
     selectedString.innerText =`${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`
     togglePotImg()
+  } else {
+    alert("Please make a selection!")
   }
   resetRadioButtons([sideRadio, mainRadio, dessertRadio, entireMealRadio]);
 }
